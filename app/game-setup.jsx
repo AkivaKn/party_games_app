@@ -1,21 +1,25 @@
 import { AntDesign } from "@expo/vector-icons";
 import Slider from "@react-native-assets/slider";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   Button,
+  Pressable,
   StyleSheet,
   Switch,
   Text,
   TextInput,
   View,
 } from "react-native";
+import { GameSetupContext } from "../contexts/GameSetupContext";
+import { useRouter } from "expo-router";
 
 export default function GameSetup() {
-  const [players, setPlayers] = useState([]);
+  const { players, setPlayers } = useContext(GameSetupContext);
   const [newPlayer, setNewPlayer] = useState("");
   const [playerError, setPlayerError] = useState("");
-  const [drinking, setDrinking] = useState(false);
-  const [spiceLevel, setSpiceLevel] = useState(0);
+  const { drinking, setDrinking } = useContext(GameSetupContext);
+  const {spiceLevel, setSpiceLevel} = useContext(GameSetupContext);
+  const router = useRouter();
 
   const handleNewPlayerChange = (text) => {
     setNewPlayer(text);
@@ -46,12 +50,26 @@ export default function GameSetup() {
     setSpiceLevel(value);
   };
 
-  
+  const startGame = () => {
+    if (players.length >= 2) {
+      setPlayerError("");
+      router.push("/game-play");
+    } else {
+      setPlayerError("Please add at least 2 players.");
+    }
+  };
 
   return (
     <View style={styles.container}>
       <Text>Add players</Text>
-      <TextInput value={newPlayer} onChangeText={handleNewPlayerChange} placeholder="John" style={styles.input} cursorColor={'black'} editable={ players.length <5} />
+      <TextInput
+        value={newPlayer}
+        onChangeText={handleNewPlayerChange}
+        placeholder="John"
+        style={styles.input}
+        cursorColor={"black"}
+        editable={players.length < 5}
+      />
       <Text>{playerError}</Text>
       <Button onPress={addPlayer} title="Add Player" />
       {players.map((player, index) => {
@@ -75,7 +93,7 @@ export default function GameSetup() {
         onValueChange={toggleDrinking}
         value={drinking}
       />
-      <Text>{`Spice level: ${'🌶️'.repeat(spiceLevel)}`}</Text>
+      <Text>{`Spice level: ${"🌶️".repeat(spiceLevel)}`}</Text>
       <Slider
         style={styles.slider}
         minimumValue={0}
@@ -86,7 +104,9 @@ export default function GameSetup() {
         value={spiceLevel}
         onSlidingComplete={handleSpiceLevelChange}
       />
-     <Button title="Start game"/>
+      <Pressable onPress={startGame}>
+        <Text>Start Game</Text>
+      </Pressable>
     </View>
   );
 }
@@ -95,7 +115,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    color:'white'
+    color: "white",
   },
   title: {
     fontSize: 24,
@@ -108,11 +128,11 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: "white",
-      borderRadius: 10,
-      height: 40,
+    borderRadius: 10,
+    height: 40,
     width: 120,
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 17,
-  }
+  },
 });

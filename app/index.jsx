@@ -1,5 +1,4 @@
 import { Link } from "expo-router";
-// import React from "react";
 import { View, StyleSheet, Text, Pressable } from "react-native";
 
 export default function HomeScreen() {
