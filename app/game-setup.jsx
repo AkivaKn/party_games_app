@@ -1,6 +1,6 @@
 import { AntDesign } from "@expo/vector-icons";
 import Slider from "@react-native-assets/slider";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   Button,
   Pressable,
@@ -11,15 +11,19 @@ import {
   View,
 } from "react-native";
 import { GameSetupContext } from "../contexts/GameSetupContext";
-import { useRouter } from "expo-router";
+import { router } from "expo-router";
 
 export default function GameSetup() {
   const { players, setPlayers } = useContext(GameSetupContext);
   const [newPlayer, setNewPlayer] = useState("");
   const [playerError, setPlayerError] = useState("");
   const { drinking, setDrinking } = useContext(GameSetupContext);
-  const {spiceLevel, setSpiceLevel} = useContext(GameSetupContext);
-  const router = useRouter();
+  const { spiceLevel, setSpiceLevel } = useContext(GameSetupContext);
+  const { setScoreSheet } = useContext(GameSetupContext);
+  
+  useEffect(() => {
+    setScoreSheet({})
+  },[])
 
   const handleNewPlayerChange = (text) => {
     setNewPlayer(text);
@@ -31,10 +35,20 @@ export default function GameSetup() {
       return;
     }
     setPlayers((currPlayers) => [...currPlayers, newPlayer]);
+    setScoreSheet((currScoreSheet) => {
+      const newScoreSheet = { ...currScoreSheet };
+      newScoreSheet[newPlayer] = 0;
+      return newScoreSheet
+    })
     setNewPlayer("");
     setPlayerError("");
   };
   const deletePlayer = (index) => {
+    setScoreSheet((currScoreSheet) => {
+      const newScoreSheet = { ...currScoreSheet };
+      delete newScoreSheet[players[index]];
+      return newScoreSheet
+    })
     setPlayers((currPlayers) => {
       const filteredPlayers = [...currPlayers];
       filteredPlayers.splice(index, 1);

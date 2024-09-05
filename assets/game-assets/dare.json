@@ -1,59 +1,233 @@
 {
-    "dares": [
-      {"text": "Do 20 push-ups.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Run around the outside of the house once.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Do your best impersonation of someone in the room.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Let someone tickle you for 30 seconds.", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Show the last photo you took on your phone.", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Let someone write a word on your forehead in marker.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Try to lick your elbow.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Post an embarrassing status on social media.", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Speak in an accent for the next 3 rounds.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Let the person to your left draw on your face with a pen.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Talk in a high-pitched voice until your next turn.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Text your crush and tell them you like them.", "spiceLevel": 2, "drinkingForfeit": "Take 4 sips"},
-      {"text": "Eat a raw onion slice.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Let someone redo your hairstyle.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Dance with no music for 1 minute.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Wear socks on your hands for the next 10 minutes.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Imitate a celebrity until someone can guess who you are.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Exchange shirts with the person next to you.", "spiceLevel": 2, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Let someone send a text from your phone.", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Eat a spoonful of mustard.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Try to juggle 3 items of the group’s choosing.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Do your best chicken dance outside on the lawn.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Read the last text you received out loud.", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Let the group give you a new nickname and use it for the rest of the game.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Do 30 jumping jacks.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Let someone give you a makeover.", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Eat a spoonful of hot sauce.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Pretend to be a waiter/waitress and take snack orders from everyone in the room.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Let the person next to you redo your profile picture.", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Call a random contact and sing them a song.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Wear your clothes backward for the next hour.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Let the group choose a tattoo (fake) to draw on you.", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Send a flirty message to someone you haven’t talked to in a while.", "spiceLevel": 2, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Try to do a magic trick.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Speak in rhymes for the next 3 rounds.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Let someone shave a part of your body.", "spiceLevel": 2, "drinkingForfeit": "Take 4 sips"},
-      {"text": "Wear a blindfold for the next 10 minutes.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Hold someone’s hand for the next 5 minutes.", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Eat a slice of lemon without making a face.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Let someone give you a back massage for 1 minute.", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Do your best animal impression until someone guesses it.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Try to walk in a straight line with your eyes closed.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Let the group pick a song and dance to it without music.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Do an impression of someone until the group can guess who you are.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Act like a cat for the next 5 minutes.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Let the group paint your nails.", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Let the group take a funny picture of you.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Talk like a baby for the next 3 rounds.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Try to lick your nose.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Let someone braid your hair.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Switch socks with someone in the room.", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Wear sunglasses for the next 3 rounds.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Pretend to be a waiter/waitress and take snack orders from everyone in the room.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Try to make the group laugh as quickly as possible.", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"}
-    ]
-  }
-  
+  "dares": [
+    { "text": "Do 20 push-ups.", "spiceLevel": 0, "forfeit": 1 },
+    {
+      "text": "Run around the outside of the house once.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Do your best impersonation of someone in the room.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Let someone tickle you for 30 seconds.",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "Show the last photo you took on your phone.",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    {
+      "text": "Let someone write a word on your forehead in marker.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    { "text": "Try to lick your elbow.", "spiceLevel": 0, "forfeit": 1 },
+    {
+      "text": "Post an embarrassing status on social media.",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    {
+      "text": "Speak in an accent for the next 3 rounds.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Let the person to your left draw on your face with a pen.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Talk in a high-pitched voice until your next turn.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Text your crush and tell them you like them.",
+      "spiceLevel": 2,
+      "forfeit": 4
+    },
+    { "text": "Eat a raw onion slice.", "spiceLevel": 0, "forfeit": 2 },
+    {
+      "text": "Let someone redo your hairstyle.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Dance with no music for 1 minute.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Wear socks on your hands for the next 10 minutes.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Imitate a celebrity until someone can guess who you are.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Exchange shirts with the person next to you.",
+      "spiceLevel": 2,
+      "forfeit": 3
+    },
+    {
+      "text": "Let someone send a text from your phone.",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    { "text": "Eat a spoonful of mustard.", "spiceLevel": 0, "forfeit": 2 },
+    {
+      "text": "Try to juggle 3 items of the group’s choosing.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Do your best chicken dance outside on the lawn.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Read the last text you received out loud.",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "Let the group give you a new nickname and use it for the rest of the game.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    { "text": "Do 30 jumping jacks.", "spiceLevel": 0, "forfeit": 1 },
+    {
+      "text": "Let someone give you a makeover.",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    { "text": "Eat a spoonful of hot sauce.", "spiceLevel": 0, "forfeit": 2 },
+    {
+      "text": "Pretend to be a waiter/waitress and take snack orders from everyone in the room.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Let the person next to you redo your profile picture.",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    {
+      "text": "Call a random contact and sing them a song.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Wear your clothes backward for the next hour.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Let the group choose a tattoo (fake) to draw on you.",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "Send a flirty message to someone you haven’t talked to in a while.",
+      "spiceLevel": 2,
+      "forfeit": 3
+    },
+    { "text": "Try to do a magic trick.", "spiceLevel": 0, "forfeit": 1 },
+    {
+      "text": "Speak in rhymes for the next 3 rounds.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Let someone shave a part of your body.",
+      "spiceLevel": 2,
+      "forfeit": 4
+    },
+    {
+      "text": "Wear a blindfold for the next 10 minutes.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Hold someone’s hand for the next 5 minutes.",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    {
+      "text": "Eat a slice of lemon without making a face.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Let someone give you a back massage for 1 minute.",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "Do your best animal impression until someone guesses it.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Try to walk in a straight line with your eyes closed.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Let the group pick a song and dance to it without music.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Do an impression of someone until the group can guess who you are.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Act like a cat for the next 5 minutes.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Let the group paint your nails.",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    {
+      "text": "Let the group take a funny picture of you.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Talk like a baby for the next 3 rounds.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    { "text": "Try to lick your nose.", "spiceLevel": 0, "forfeit": 1 },
+    { "text": "Let someone braid your hair.", "spiceLevel": 0, "forfeit": 2 },
+    {
+      "text": "Switch socks with someone in the room.",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Wear sunglasses for the next 3 rounds.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Try to make the group laugh as quickly as possible.",
+      "spiceLevel": 0,
+      "forfeit": 1
+    }
+  ]
+}

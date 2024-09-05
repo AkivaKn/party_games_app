@@ -1,55 +1,226 @@
 {
-    "truths": [
-      {"text": "What’s the most embarrassing thing you’ve ever done?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever lied to get out of trouble?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Who was your first crush?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever stolen something?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s your biggest fear?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever had a crush on a friend’s partner?", "spiceLevel": 2, "drinkingForfeit": "Take 3 sips"},
-      {"text": "What’s the most romantic thing you’ve done?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever cheated on someone?", "spiceLevel": 3, "drinkingForfeit": "Take 4 sips"},
-      {"text": "What’s the weirdest thing you’ve ever done in front of a mirror?", "spiceLevel": 2, "drinkingForfeit": "Take 3 sips"},
-      {"text": "What’s your most embarrassing habit?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever been in love?", "spiceLevel": 1, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever kissed someone of the same sex?", "spiceLevel": 2, "drinkingForfeit": "Take 3 sips"},
-      {"text": "What’s the most awkward date you’ve ever been on?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever faked being sick to miss work or school?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever sent a text to the wrong person?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "What’s your biggest regret?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever been caught lying?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s the worst gift you’ve ever received?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "What’s the craziest thing you’ve done on a dare?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever snooped through someone’s phone?", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "What’s the worst lie you’ve ever told?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Who’s the last person you stalked on social media?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s the strangest dream you’ve ever had?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever lied about your age?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s your worst habit?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever peed in a pool?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever had a one-night stand?", "spiceLevel": 3, "drinkingForfeit": "Take 4 sips"},
-      {"text": "What’s the most money you’ve ever spent on something frivolous?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever flirted with someone just to get something you wanted?", "spiceLevel": 2, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Have you ever gone skinny dipping?", "spiceLevel": 3, "drinkingForfeit": "Take 4 sips"},
-      {"text": "What’s the most embarrassing thing you’ve done while drunk?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s the most inappropriate time you’ve ever laughed?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever had a crush on a teacher?", "spiceLevel": 2, "drinkingForfeit": "Take 3 sips"},
-      {"text": "What’s the most childish thing you still do?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever been caught doing something you shouldn’t have?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s the biggest secret you’ve ever kept from your parents?", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Have you ever ghosted someone?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s the most awkward conversation you’ve ever had?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever lied about being busy to avoid a hangout?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "What’s the longest you’ve gone without showering?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever been rejected by someone?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s the worst date you’ve ever been on?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever lied in a job interview?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s the most embarrassing nickname you’ve ever had?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"},
-      {"text": "Have you ever had feelings for someone who didn’t feel the same?", "spiceLevel": 2, "drinkingForfeit": "Take 3 sips"},
-      {"text": "What’s the worst trouble you’ve gotten into at school?", "spiceLevel": 0, "drinkingForfeit": "Take 2 sips"},
-      {"text": "Have you ever lied about your relationship status?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s the craziest thing you’ve done for love?", "spiceLevel": 1, "drinkingForfeit": "Take 3 sips"},
-      {"text": "Have you ever given someone a fake phone number?", "spiceLevel": 1, "drinkingForfeit": "Take 2 sips"},
-      {"text": "What’s the most childish thing you’ve done recently?", "spiceLevel": 0, "drinkingForfeit": "Take 1 sip"}
-    ]
-  }
-  
+  "truths": [
+    {
+      "text": "What’s the most embarrassing thing you’ve ever done?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Have you ever lied to get out of trouble?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    { "text": "Who was your first crush?", "spiceLevel": 1, "forfeit": 2 },
+    {
+      "text": "Have you ever stolen something?",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    { "text": "What’s your biggest fear?", "spiceLevel": 0, "forfeit": 1 },
+    {
+      "text": "Have you ever had a crush on a friend’s partner?",
+      "spiceLevel": 2,
+      "forfeit": 3
+    },
+    {
+      "text": "What’s the most romantic thing you’ve done?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "Have you ever cheated on someone?",
+      "spiceLevel": 3,
+      "forfeit": 4
+    },
+    {
+      "text": "What’s the weirdest thing you’ve ever done in front of a mirror?",
+      "spiceLevel": 2,
+      "forfeit": 3
+    },
+    {
+      "text": "What’s your most embarrassing habit?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    { "text": "Have you ever been in love?", "spiceLevel": 1, "forfeit": 1 },
+    {
+      "text": "Have you ever kissed someone of the same sex?",
+      "spiceLevel": 2,
+      "forfeit": 3
+    },
+    {
+      "text": "What’s the most awkward date you’ve ever been on?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "Have you ever faked being sick to miss work or school?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Have you ever sent a text to the wrong person?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    { "text": "What’s your biggest regret?", "spiceLevel": 0, "forfeit": 2 },
+    {
+      "text": "Have you ever been caught lying?",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "What’s the worst gift you’ve ever received?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "What’s the craziest thing you’ve done on a dare?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "Have you ever snooped through someone’s phone?",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    {
+      "text": "What’s the worst lie you’ve ever told?",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Who’s the last person you stalked on social media?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "What’s the strangest dream you’ve ever had?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Have you ever lied about your age?",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    { "text": "What’s your worst habit?", "spiceLevel": 0, "forfeit": 1 },
+    { "text": "Have you ever peed in a pool?", "spiceLevel": 0, "forfeit": 2 },
+    {
+      "text": "Have you ever had a one-night stand?",
+      "spiceLevel": 3,
+      "forfeit": 4
+    },
+    {
+      "text": "What’s the most money you’ve ever spent on something frivolous?",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Have you ever flirted with someone just to get something you wanted?",
+      "spiceLevel": 2,
+      "forfeit": 3
+    },
+    {
+      "text": "Have you ever gone skinny dipping?",
+      "spiceLevel": 3,
+      "forfeit": 4
+    },
+    {
+      "text": "What’s the most embarrassing thing you’ve done while drunk?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "What’s the most inappropriate time you’ve ever laughed?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Have you ever had a crush on a teacher?",
+      "spiceLevel": 2,
+      "forfeit": 3
+    },
+    {
+      "text": "What’s the most childish thing you still do?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Have you ever been caught doing something you shouldn’t have?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "What’s the biggest secret you’ve ever kept from your parents?",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    { "text": "Have you ever ghosted someone?", "spiceLevel": 1, "forfeit": 2 },
+    {
+      "text": "What’s the most awkward conversation you’ve ever had?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Have you ever lied about being busy to avoid a hangout?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "What’s the longest you’ve gone without showering?",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Have you ever been rejected by someone?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "What’s the worst date you’ve ever been on?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "Have you ever lied in a job interview?",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "What’s the most embarrassing nickname you’ve ever had?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    },
+    {
+      "text": "Have you ever had feelings for someone who didn’t feel the same?",
+      "spiceLevel": 2,
+      "forfeit": 3
+    },
+    {
+      "text": "What’s the worst trouble you’ve gotten into at school?",
+      "spiceLevel": 0,
+      "forfeit": 2
+    },
+    {
+      "text": "Have you ever lied about your relationship status?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "What’s the craziest thing you’ve done for love?",
+      "spiceLevel": 1,
+      "forfeit": 3
+    },
+    {
+      "text": "Have you ever given someone a fake phone number?",
+      "spiceLevel": 1,
+      "forfeit": 2
+    },
+    {
+      "text": "What’s the most childish thing you’ve done recently?",
+      "spiceLevel": 0,
+      "forfeit": 1
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { Button, Text, View } from "react-native";
+import { Button, Pressable, Text, View } from "react-native";
 import { GameSetupContext } from "../contexts/GameSetupContext";
 import truthData from "../assets/game-assets/truth.json";
 import dareData from "../assets/game-assets/dare.json";
+import { router } from "expo-router";
 
 export default function GamePlay() {
   const { players } = useContext(GameSetupContext);
@@ -14,6 +15,7 @@ export default function GamePlay() {
   const [truthsList, setTruthsList] = useState(truthData.truths);
   const [daresList, setDaresList] = useState(dareData.dares);
   const [currentPlayer, setCurrentPlayer] = useState(0);
+    const { setScoreSheet } = useContext(GameSetupContext);
 
   useEffect(() => {
     setShowTruthOrDare(true);
@@ -50,8 +52,18 @@ export default function GamePlay() {
     }
   };
 
-  const nextQuestion = () => {
-      setCurrentPlayer((currPlayer) => {
+    const nextQuestion = (completed) => {
+        if (!drinking && completed) {
+            setScoreSheet((currScores) => {
+                const newScores = { ...currScores };
+                newScores[players[currentPlayer]] = currScores[players[currentPlayer]] + currentGame.forfeit;
+                return newScores;
+          })
+        }
+        if (questionNumber === 10) {
+            router.push('/game-over')
+        }
+    setCurrentPlayer((currPlayer) => {
       if (currPlayer < players.length - 1) {
         return currPlayer + 1;
       } else {
@@ -63,24 +75,23 @@ export default function GamePlay() {
   };
 
   return showTruthOrDare ? (
-      <View>
-          <Text>{ players[currentPlayer]}</Text>
+    <View>
+      <Text>{players[currentPlayer]}</Text>
       <Button title="Truth" onPress={() => handleSelection("truth")} />
       <Button title="Dare" onPress={() => handleSelection("dare")} />
     </View>
   ) : (
-          <View>
-          <Text>{ players[currentPlayer]}</Text>
+    <View>
+      <Text>{players[currentPlayer]}</Text>
       <Text>{currentGame.text}</Text>
-      {drinking ? (
-        <Button
-          title={`${currentGame.drinkingForfeit}`}
-          onPress={nextQuestion}
-        />
-      ) : (
-        <Button title="Forfeit" onPress={nextQuestion} />
-      )}
-      <Button title="Completed" onPress={nextQuestion} />
+      <Pressable onPress={()=> nextQuestion(false)}>
+        <Text>
+          {drinking ? `Drink ${"🥃".repeat(currentGame.forfeit)}` : "Forfeit"}
+        </Text>
+      </Pressable>
+      <Pressable onPress={()=> nextQuestion(true)}>
+                  <Text>Done{ !drinking && ` +${currentGame.forfeit}`}</Text>
+      </Pressable>
     </View>
   );
 }
