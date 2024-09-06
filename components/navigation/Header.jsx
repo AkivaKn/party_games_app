@@ -7,7 +7,7 @@ export default function Header({ screenName }) {
   return (
     <View style={styles.headerContainer}>
       {screenName !== "home" && (
-        <Link href="/" asChild>
+        <Link replace href="/" asChild>
           <Pressable style={styles.leftIcon}>
             <AntDesign name="home" size={30} color="#FFEB3B" />
           </Pressable>
@@ -17,7 +17,7 @@ export default function Header({ screenName }) {
       <View style={styles.buttonContainer}>
         {screenName === "game-play" && (
           <>
-            <Link href="/game-setup" asChild>
+            <Link replace href="/game-setup" asChild>
               <Pressable style={styles.icon}>
                 <MaterialCommunityIcons
                   name="restart"

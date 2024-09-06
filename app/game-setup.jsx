@@ -20,10 +20,16 @@ export default function GameSetup() {
   const { drinking, setDrinking } = useContext(GameSetupContext);
   const { spiceLevel, setSpiceLevel } = useContext(GameSetupContext);
   const { setScoreSheet } = useContext(GameSetupContext);
-  
+
   useEffect(() => {
-    setScoreSheet({})
-  },[])
+    setScoreSheet(() => {
+      const newScoreSheet = {};
+      players.forEach((player) => {
+        newScoreSheet[player] = 0;
+      });
+      return newScoreSheet;
+    });
+  }, []);
 
   const handleNewPlayerChange = (text) => {
     setNewPlayer(text);
@@ -38,8 +44,8 @@ export default function GameSetup() {
     setScoreSheet((currScoreSheet) => {
       const newScoreSheet = { ...currScoreSheet };
       newScoreSheet[newPlayer] = 0;
-      return newScoreSheet
-    })
+      return newScoreSheet;
+    });
     setNewPlayer("");
     setPlayerError("");
   };
@@ -47,8 +53,8 @@ export default function GameSetup() {
     setScoreSheet((currScoreSheet) => {
       const newScoreSheet = { ...currScoreSheet };
       delete newScoreSheet[players[index]];
-      return newScoreSheet
-    })
+      return newScoreSheet;
+    });
     setPlayers((currPlayers) => {
       const filteredPlayers = [...currPlayers];
       filteredPlayers.splice(index, 1);
@@ -75,51 +81,62 @@ export default function GameSetup() {
 
   return (
     <View style={styles.container}>
-      <Text>Add players</Text>
+      <Text style={styles.title}>Game Setup</Text>
+      <Text style={styles.subtitle}>Add Players</Text>
       <TextInput
         value={newPlayer}
         onChangeText={handleNewPlayerChange}
-        placeholder="John"
+        placeholder="Enter name"
         style={styles.input}
         cursorColor={"black"}
         editable={players.length < 5}
       />
-      <Text>{playerError}</Text>
-      <Button onPress={addPlayer} title="Add Player" />
+      {playerError && <Text style={styles.errorText}>{playerError}</Text>}
+      <Pressable style={styles.addButton} onPress={addPlayer}>
+        <Text style={styles.addButtonText}>Add Player</Text>
+      </Pressable>
       {players.map((player, index) => {
         return (
-          <View key={index}>
-            <Text>{player}</Text>
+          <View key={index} style={styles.playerCard}>
+            <Text style={styles.playerText}>{player}</Text>
             <AntDesign.Button
               onPress={() => deletePlayer(index)}
               name="closecircleo"
-              size={24}
-              color="black"
+              size={20}
+              color="#ff1744"
+              backgroundColor="transparent"
+              iconStyle={{ marginRight: 0 }}
             />
           </View>
         );
       })}
-      <Text>Drinking</Text>
-      <Switch
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        thumbColor={drinking ? "#f5dd4b" : "#f4f3f4"}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleDrinking}
-        value={drinking}
-      />
-      <Text>{`Spice level: ${"🌶️".repeat(spiceLevel)}`}</Text>
+      <View style={styles.settingsContainer}>
+        <Text style={styles.label}>Drinking</Text>
+        <Switch
+          trackColor={{ false: "#e0e0e0", true: "#4caf50" }}
+          thumbColor={drinking ? "#ffffff" : "#bdbdbd"}
+          ios_backgroundColor="#bdbdbd"
+          onValueChange={toggleDrinking}
+          value={drinking}
+          style={styles.switch}
+        />
+      </View>
+      <Text style={styles.label}>{`Spice level: ${"🌶️".repeat(
+        spiceLevel
+      )}`}</Text>
       <Slider
         style={styles.slider}
         minimumValue={0}
         maximumValue={4}
         step={1}
-        minimumTrackTintColor="#FFFFFF"
-        maximumTrackTintColor="#000000"
+        minimumTrackTintColor="#FF5722"
+        maximumTrackTintColor="#BDBDBD"
+        thumbTintColor="#FFAB40"
         value={spiceLevel}
         onSlidingComplete={handleSpiceLevelChange}
       />
-      <Pressable onPress={startGame}>
-        <Text>Start Game</Text>
+      <Pressable style={styles.startButton} onPress={startGame}>
+        <Text style={styles.startButtonText}>Start Game</Text>
       </Pressable>
     </View>
   );
@@ -129,24 +146,111 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    color: "white",
+    backgroundColor: "#fbe9e7",
   },
   title: {
-    fontSize: 24,
-    marginBottom: 20,
+    fontSize: 30,
+    fontWeight: "bold",
+    color: "#FF5722",
+    marginBottom: 10,
   },
-  slider: {
-    width: 200,
-    height: 40,
-    flexGrow: 0,
+  subtitle: {
+    fontSize: 20,
+    color: "#757575",
+    marginBottom: 10,
   },
   input: {
     backgroundColor: "white",
     borderRadius: 10,
     height: 40,
-    width: 120,
+    width: 200,
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 17,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 5,
+    marginBottom: 10,
+  },
+  addButton: {
+    backgroundColor: "#FF5722",
+    borderRadius: 10,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    marginVertical: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  addButtonText: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 16,
+    textAlign: "center",
+  },
+  playerCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    paddingLeft: 15,
+    paddingRight: 10,
+    marginBottom: 10,
+    width: 200,
+    height: 40,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  playerText: {
+    fontSize: 16,
+    color: "#333",
+    fontWeight: "bold",
+  },
+  errorText: {
+    color: "#ff1744",
+    marginBottom: 10,
+  },
+  settingsContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 5,
+    justifyContent: "center",
+  },
+  switch: {
+    marginLeft: 20,
+  },
+  label: {
+    fontSize: 18,
+    color: "#757575",
+  },
+  slider: {
+    width: 200,
+    height: 40,
+    marginBottom: 10,
+  },
+  startButton: {
+    backgroundColor: "#FF5722",
+    borderRadius: 20,
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 8,
+  },
+  startButtonText: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 18,
+    textTransform: "uppercase",
   },
 });
