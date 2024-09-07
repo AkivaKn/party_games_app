@@ -2,7 +2,6 @@ import { AntDesign } from "@expo/vector-icons";
 import Slider from "@react-native-assets/slider";
 import { useContext, useEffect, useState } from "react";
 import {
-  Button,
   Pressable,
   StyleSheet,
   Switch,
@@ -10,7 +9,7 @@ import {
   TextInput,
   View,
 } from "react-native";
-import { GameSetupContext } from "../contexts/GameSetupContext";
+import { GameSetupContext } from "../../contexts/truth-or-dare/GameSetupContext";
 import { router } from "expo-router";
 
 export default function GameSetup() {
@@ -73,7 +72,7 @@ export default function GameSetup() {
   const startGame = () => {
     if (players.length >= 2) {
       setPlayerError("");
-      router.push("/game-play");
+      router.push("truth-or-dare/game-play");
     } else {
       setPlayerError("Please add at least 2 players.");
     }

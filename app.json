@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "truth_or_dare",
-    "slug": "truth_or_dare",
+    "name": "party_games_app",
+    "slug": "party_games_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

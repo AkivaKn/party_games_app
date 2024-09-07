@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Pressable, StyleSheet, Text, View, Dimensions } from "react-native";
-import { GameSetupContext } from "../contexts/GameSetupContext";
-import truthData from "../assets/game-assets/truth.json";
-import dareData from "../assets/game-assets/dare.json";
+import { GameSetupContext } from "../../contexts/truth-or-dare/GameSetupContext";
+import truthData from "../../assets/game-assets/truth.json";
+import dareData from "../../assets/game-assets/dare.json";
 import { router } from "expo-router";
 
 export default function GamePlay() {
@@ -22,8 +22,12 @@ export default function GamePlay() {
   }, [questionNumber]);
 
   useEffect(() => {
-    setTruthsList((currList) => currList.filter((truth) => truth.spiceLevel <= spiceLevel));
-    setDaresList((currList) => currList.filter((dare) => dare.spiceLevel <= spiceLevel));
+    setTruthsList((currList) =>
+      currList.filter((truth) => truth.spiceLevel <= spiceLevel)
+    );
+    setDaresList((currList) =>
+      currList.filter((dare) => dare.spiceLevel <= spiceLevel)
+    );
   }, []);
 
   const handleSelection = (selection) => {
@@ -51,15 +55,18 @@ export default function GamePlay() {
   const nextQuestion = (completed) => {
     if (!drinking && completed) {
       setScoreSheet((currScores) => {
-          const newScores = { ...currScores };
-        newScores[players[currentPlayer]] = currScores[players[currentPlayer]] + currentGame.forfeit;
-          return newScores;
+        const newScores = { ...currScores };
+        newScores[players[currentPlayer]] =
+          currScores[players[currentPlayer]] + currentGame.forfeit;
+        return newScores;
       });
     }
     if (questionNumber === 10) {
-      router.push('/game-over');
+      router.push("truth-or-dare/game-over");
     } else {
-      setCurrentPlayer((currPlayer) => (currPlayer < players.length - 1 ? currPlayer + 1 : 0));
+      setCurrentPlayer((currPlayer) =>
+        currPlayer < players.length - 1 ? currPlayer + 1 : 0
+      );
       setQuestionNumber((currNumber) => currNumber + 1);
       setCurrentGame({});
     }
@@ -70,10 +77,16 @@ export default function GamePlay() {
       <Text style={styles.playerText}>{players[currentPlayer]}</Text>
       {showTruthOrDare ? (
         <View style={styles.selectionContainer}>
-          <Pressable style={styles.truthButton} onPress={() => handleSelection("truth")}>
+          <Pressable
+            style={styles.truthButton}
+            onPress={() => handleSelection("truth")}
+          >
             <Text style={styles.buttonText}>Truth</Text>
           </Pressable>
-          <Pressable style={styles.dareButton} onPress={() => handleSelection("dare")}>
+          <Pressable
+            style={styles.dareButton}
+            onPress={() => handleSelection("dare")}
+          >
             <Text style={styles.buttonText}>Dare</Text>
           </Pressable>
         </View>
@@ -81,12 +94,20 @@ export default function GamePlay() {
         <View style={styles.gameContainer}>
           <Text style={styles.gameText}>{currentGame.text}</Text>
           <View style={styles.actionsContainer}>
-            <Pressable style={styles.forfeitButton} onPress={() => nextQuestion(false)}>
+            <Pressable
+              style={styles.forfeitButton}
+              onPress={() => nextQuestion(false)}
+            >
               <Text style={styles.actionButtonText}>
-                {drinking ? `Drink ${"🥃".repeat(currentGame.forfeit)}` : "Forfeit"}
+                {drinking
+                  ? `Drink ${"🥃".repeat(currentGame.forfeit)}`
+                  : "Forfeit"}
               </Text>
             </Pressable>
-            <Pressable style={styles.doneButton} onPress={() => nextQuestion(true)}>
+            <Pressable
+              style={styles.doneButton}
+              onPress={() => nextQuestion(true)}
+            >
               <Text style={styles.actionButtonText}>
                 Done{!drinking && ` +${currentGame.forfeit}`}
               </Text>
@@ -98,7 +119,7 @@ export default function GamePlay() {
   );
 }
 
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
@@ -117,7 +138,7 @@ const styles = StyleSheet.create({
   selectionContainer: {
     flex: 1,
     justifyContent: "center",
-    width: '100%',
+    width: "100%",
     alignItems: "center",
   },
   truthButton: {
@@ -156,7 +177,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    width: '100%',
+    width: "100%",
   },
   gameText: {
     fontSize: 24,
@@ -169,7 +190,7 @@ const styles = StyleSheet.create({
   actionsContainer: {
     flexDirection: "row",
     justifyContent: "space-around",
-    width: '100%',
+    width: "100%",
     paddingHorizontal: 20,
   },
   forfeitButton: {

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { GameSetupContext } from "../contexts/GameSetupContext";
+import { GameSetupContext } from "../../contexts/truth-or-dare/GameSetupContext";
 import { Text, View, StyleSheet, Pressable, Dimensions } from "react-native";
 import { Link } from "expo-router";
 
@@ -22,12 +22,12 @@ export default function GameOver() {
         </View>
       )}
       <View style={styles.buttonsContainer}>
-        <Link replace href="/" asChild>
+        <Link replace href="truth-or-dare/" asChild>
           <Pressable style={styles.button}>
             <Text style={styles.buttonText}>Home</Text>
           </Pressable>
         </Link>
-        <Link replace href="/game-setup" asChild>
+        <Link replace href="truth-or-dare/game-setup" asChild>
           <Pressable style={styles.button}>
             <Text style={styles.buttonText}>New Game</Text>
           </Pressable>

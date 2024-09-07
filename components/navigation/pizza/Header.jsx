@@ -6,18 +6,16 @@ import { Text, View, Pressable, StyleSheet } from "react-native";
 export default function Header({ screenName }) {
   return (
     <View style={styles.headerContainer}>
-      {screenName !== "home" && (
-        <Link replace href="/" asChild>
-          <Pressable style={styles.leftIcon}>
-            <AntDesign name="home" size={30} color="#FFEB3B" />
-          </Pressable>
-        </Link>
-      )}
-      <Text style={styles.headerText}>Truth or Dare</Text>
+      <Link replace href="/" asChild>
+        <Pressable style={styles.leftIcon}>
+          <AntDesign name="home" size={30} color="#FFEB3B" />
+        </Pressable>
+      </Link>
+      <Text style={styles.headerText}>Pizza</Text>
       <View style={styles.buttonContainer}>
         {screenName === "game-play" && (
           <>
-            <Link replace href="/game-setup" asChild>
+            <Link replace href="pizza/game-setup" asChild>
               <Pressable style={styles.icon}>
                 <MaterialCommunityIcons
                   name="restart"
@@ -33,6 +31,7 @@ export default function Header({ screenName }) {
           </>
         )}
         {screenName === "game-setup" && (
+          // Link to instructions page
           <Pressable style={styles.icon}>
             <Feather name="info" size={30} color="#03DAC6" />
           </Pressable>

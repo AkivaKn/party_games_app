@@ -4,16 +4,11 @@ import { View, StyleSheet, Text, Pressable } from "react-native";
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>🎉 Welcome to Party Games! 🎉</Text>
+      <Text style={styles.title}>🎉 Welcome to Truth or Dare! 🎉</Text>
       <Text style={styles.subtitle}>Ready to have some fun? Let’s get started!</Text>
-      <Link href="/truth-or-dare/" asChild>
+      <Link href="truth-or-dare/game-setup" asChild>
         <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Truth or Dare</Text>
-        </Pressable>
-      </Link>
-      <Link href="/pizza/" asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Pizza</Text>
+          <Text style={styles.buttonText}>Start New Game</Text>
         </Pressable>
       </Link>
     </View>
